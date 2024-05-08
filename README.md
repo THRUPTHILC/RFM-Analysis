@@ -47,13 +47,21 @@ RFM SCORE:
 2.Pivot table2 is craeted to consolidate the number of customers.
 
 Marketing strategy:
+
 1.333-->The best customer(Recent,Frequent and good spent).We can provide service to retain them
+
 2.233-->lacks recency, so shopping notification can make them recent
+
 3.323-->lacks frequency,strategy like offers on further orders can make them frequent
+
 4.332-->lacks spending money,stragey like flat off on higher amount order can make them to spend more
+
 5.133-->Srategy brigning to platform can make them 333
+
 6.313-->Making them frequent,can push these category to 333.
+
 7.111-->No investment needed.
+
 
 Likewise, customer segmentation and retention can be planned with minimal budget and max returns.
 
