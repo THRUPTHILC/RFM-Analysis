@@ -1,72 +1,52 @@
-**RFM ANALYSIS:
-RECENCY-FREQUENCY-MONETARY**
+**Project Description**:
 
-RFM strategy helps optimize marketing budget by focusing efforts on the most valuable customer segments, while the framework behind coupon codes enables e-commerce businesses to implement targeted promotions effectively within their marketing strategies.
+**Data Cleaning and Manipulation:**
 
-The RFM strategy is a data-driven marketing technique used by companies to segment their customers based on their past behavior. RFM stands for:
+I acquired an e-commerce dataset comprising 2,011 records containing customer ID, order monetary value, units purchased, order date, and last purchase date for customer segmentation. Considering the analysis date as the latest order date within 2019-2020, I calculated:
 
-1.Recency: How recently a customer made a purchase.
+**Recency**: Defined as analysis date minus last purchase date.
 
-2.Frequency: How often a customer makes purchases.
+**Frequency**: Count of orders per customer using COUNTIF().
 
-3.Monetary: How much money a customer spends.
+**Monetary Value**: Total order amount per customer using SUMIF().
 
-By analyzing these three dimensions, businesses can categorize customers into different segments (e.g., high-value/loyal customers,low-value, infrequent customers). This segmentation helps in targeting marketing efforts more effectively.
+I transformed the order-level data into customer-level data using Pivot Table 1.
 
-PROJECT DESCRIPTION:
+**RFM Analysis:**
 
-Data cleaning and manipulating:
+Customer Segmentation into 3 Segments:
 
-1. I have taken a e-commerce data of 2,011 records which has customer id, monetary value of the order,units purchased, order date,	Last_Purchase_date columns for customer segmentation.
-2. As the data is from 2019-2020, i have considered analysis date as max date of ordered purchased.
-3. Recency is calculated by analysis date-last purchase date
-4. Frequency is calculated by countif() for no of times customer ordered the items.
-5. Monetary value is calculated by sumif() for total order amount
-6. By adding Pivot table1 i have segregated the data which was in order level to customer level.
-   
-RFM Analysis:
+Customers are categorized into three segments based on RFM scores (3 for highest, 2 for intermediate, 1 for least):
 
-1.I need customers in 3 segments(3-->highest score,2-->intermediate score,1--.least score)
+Recency: Customers are segmented into recent (within 49 days, 33%), intermediate (50-259 days, 66%), and least recent (>259 days, 99%).
 
-2.I will group the customer by percentile. =PERCENTILE.EXC()
+Frequency: Customers are segmented into frequent (9 times or more, 66%), intermediate (2-8 times, 33%), and least frequent (less than 2 times, 1%).
 
-RECENCY:
-1. I divided customer who have purchased within 49 days(33%),50-259(66%),>259(99%)
-2. The score for recent customer is 3,intermediate is 2 and least show up customers is 1
-   
-FREQUENCY:
-1. I divided customer who have purchased 2 times(33%),9 times(66%),>9(99%)
-2. The score for frequent customer is 3,intermediate is 2 and least frequent customers is 1
+Monetary: Customers are segmented into high-spending (more than ₹16,980, 99%), intermediate (₹3,156-₹16,980, 66%), and least spending (less than ₹3,156, 33%).
 
-MONETARY:
-1. I divided customer who have shopped for 3156 rupees(33%), 16980 rupees(66%),>16980 rupees(99%)
-2. The score for high spent customer is 3,intermediate is 2 and least spent customers is 1.
+**RFM Score:**
 
-RFM SCORE:
-1.Concatinating the RFM scores results in 3 digit code
-2.Pivot table2 is craeted to consolidate the number of customers.
+Concatenated RFM scores result in a 3-digit code.
 
-Marketing strategy:
+Marketing Strategy:
 
-1.333-->The best customer(Recent,Frequent and good spent).We can provide service to retain them
+I developed a marketing strategy based on RFM segments:
 
-2.233-->lacks recency, so shopping notification can make them recent
+333: Targeted service offerings to retain the best customers (recent, frequent, high-spending).
 
-3.323-->lacks frequency,strategy like offers on further orders can make them frequent
+233: Implement shopping notifications to increase recency.
 
-4.332-->lacks spending money,stragey like flat off on higher amount order can make them to spend more
+323: Offer incentives to increase purchase frequency.
 
-5.133-->Srategy brigning to platform can make them 333
+332: Provide discounts on higher order amounts to boost spending.
 
-6.313-->Making them frequent,can push these category to 333.
+133: Attract customers back to the platform for potential high-value transactions.
 
-7.111-->No investment needed.
+313: Encourage repeat purchases to convert into high-value customers.
 
+111: No specific investment needed for this segment.
 
-Likewise, customer segmentation and retention can be planned with minimal budget and max returns.
-
-
-
+This customer segmentation approach enables effective marketing planning with minimal budget and maximized returns.
 
 
 
